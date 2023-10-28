@@ -58,7 +58,7 @@ struct EditLogView: View {
                 }
 
                 Section {
-                    Button("Create") {
+                    Button("Update") {
                         save()
                         dismiss()
                     }

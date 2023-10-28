@@ -56,30 +56,24 @@ struct ContentView: View {
                         }
                         // タブ1
                         .tabItem {
-                            Image(systemName: "cart.fill")
+                            Image(systemName: "cart")
                             Text("Logs List")
                         }
                         .tag(0)
-
-                        // Calendar Tab
-                        Text("ここにタブ2のコンテンツを追加してください。")
+                        // Setting Tab
+                        SettingView()
                             .tabItem {
-                                Image(systemName: "calendar")
-                                Text("Calendar")
+                                Image(systemName: "gearshape")
+                                Text("Setting")
                             }
                             .tag(1)
                     }
+                    .accentColor(.white)
                 } // VStack
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         EditButton()
                             .foregroundStyle(Color.gray)
-                    }
-                    ToolbarItem {
-                        Button(action: {}) {
-                            Label("Add Item", systemImage: "gearshape.fill")
-                        }
-                        .foregroundColor(.gray)
                     }
                 }
                 // 丸い追加ボタン
@@ -91,13 +85,13 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
-                                .frame(width: 60, height: 60)
-                                .foregroundColor(.black)
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(.green)
                         }
                         .padding(3)
-                        .background(Color.white)
+//                        .background(Color.white)
                         .clipShape(Circle())
-                        .shadow(radius: 10)
+                        .shadow(radius: 5)
                         .zIndex(1) // ボタンを最前面に表示
                         Spacer()
                             .frame(height: 25)

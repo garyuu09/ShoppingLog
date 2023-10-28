@@ -17,6 +17,7 @@
 		D6875C962AEB4A8F003AB250 /* ShoppingLogUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875C952AEB4A8F003AB250 /* ShoppingLogUITestsLaunchTests.swift */; };
 		D6875CA32AEB572A003AB250 /* CreateLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875CA22AEB572A003AB250 /* CreateLogView.swift */; };
 		D6875CA52AEB5A1B003AB250 /* EditLogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875CA42AEB5A1B003AB250 /* EditLogView.swift */; };
+		D6875CA72AECAC18003AB250 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875CA62AECAC18003AB250 /* SettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		D6875C952AEB4A8F003AB250 /* ShoppingLogUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingLogUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D6875CA22AEB572A003AB250 /* CreateLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLogView.swift; sourceTree = "<group>"; };
 		D6875CA42AEB5A1B003AB250 /* EditLogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditLogView.swift; sourceTree = "<group>"; };
+		D6875CA62AECAC18003AB250 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				D6875C782AEB4A8D003AB250 /* ContentView.swift */,
 				D6875C7A2AEB4A8D003AB250 /* Item.swift */,
 				D6875CA22AEB572A003AB250 /* CreateLogView.swift */,
+				D6875CA62AECAC18003AB250 /* SettingView.swift */,
 				D6875CA42AEB5A1B003AB250 /* EditLogView.swift */,
 				D6875C7C2AEB4A8E003AB250 /* Assets.xcassets */,
 				D6875C7E2AEB4A8E003AB250 /* Preview Content */,
@@ -269,6 +272,7 @@
 				D6875CA52AEB5A1B003AB250 /* EditLogView.swift in Sources */,
 				D6875C792AEB4A8D003AB250 /* ContentView.swift in Sources */,
 				D6875C7B2AEB4A8D003AB250 /* Item.swift in Sources */,
+				D6875CA72AECAC18003AB250 /* SettingView.swift in Sources */,
 				D6875C772AEB4A8D003AB250 /* ShoppingLogApp.swift in Sources */,
 				D6875CA32AEB572A003AB250 /* CreateLogView.swift in Sources */,
 			);
@@ -442,7 +446,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,7 +475,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

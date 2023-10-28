@@ -75,12 +75,6 @@ struct ContentView: View {
                         EditButton()
                             .foregroundStyle(Color.gray)
                     }
-                    ToolbarItem {
-                        Button(action: {}) {
-                            Label("Add Item", systemImage: "gearshape.fill")
-                        }
-                        .foregroundColor(.gray)
-                    }
                 }
                 // 丸い追加ボタン
                 HStack {

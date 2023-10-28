@@ -56,19 +56,19 @@ struct ContentView: View {
                         }
                         // タブ1
                         .tabItem {
-                            Image(systemName: "cart.fill")
+                            Image(systemName: "cart")
                             Text("Logs List")
                         }
                         .tag(0)
-
-                        // Calendar Tab
-                        Text("ここにタブ2のコンテンツを追加してください。")
+                        // Setting Tab
+                        SettingView()
                             .tabItem {
-                                Image(systemName: "calendar")
-                                Text("Calendar")
+                                Image(systemName: "gearshape")
+                                Text("Setting")
                             }
                             .tag(1)
                     }
+                    .accentColor(.white)
                 } // VStack
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {

@@ -32,23 +32,22 @@ struct EditLogView: View {
                             .resizable()
                             .scaledToFill()
                             .frame(maxWidth: .infinity, maxHeight: 300)
+                    }
+                    PhotosPicker(selection: $selectedPhoto,
+                                 matching: .images,
+                                 photoLibrary: .shared()) {
+                        Label("Add Image", systemImage: "photo")
+                    }
 
-                        if item.image != nil {
-
-                            Button(role: .destructive) {
-                                withAnimation {
-                                    selectedPhoto = nil
-                                    item.image = nil
-                                }
-                            } label: {
-                                Label("Remove Image", systemImage: "xmark")
-                                    .foregroundStyle(.red)
+                    if item.image != nil {
+                        Button(role: .destructive) {
+                            withAnimation {
+                                selectedPhoto = nil
+                                item.image = nil
                             }
-                        }
-                        PhotosPicker(selection: $selectedPhoto,
-                                     matching: .images,
-                                     photoLibrary: .shared()) {
-                            Label("Add Image", systemImage: "photo")
+                        } label: {
+                            Label("Remove Image", systemImage: "xmark")
+                                .foregroundStyle(.red)
                         }
                     }
                 }

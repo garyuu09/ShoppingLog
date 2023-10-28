@@ -60,7 +60,7 @@ struct ContentView: View {
                                     .foregroundStyle(Color.gray)
                             }
                         }
-                        .navigationTitle("Shopping Logs")
+                        .navigationTitle("Shopping Log")
                         .navigationBarTitleDisplayMode(.inline)
                         .font(.headline)
                     }

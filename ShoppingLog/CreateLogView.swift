@@ -18,50 +18,43 @@ struct CreateLogView: View {
         @State var selectedPhoto: PhotosPickerItem?
 
         var body: some View {
-                List {
-                    Section("Info") {
-                        TextField("memo", text: $item.title)
-
-                        DatePicker("Date", selection: $item.timestamp)
-                            .fixedSize()
+            List {
+                Section("Info") {
+                    TextField("Title", text: $item.title)
+                    
+                    DatePicker("Date", selection: $item.timestamp)
+                        .fixedSize()
+                }
+                
+                Section("Image") {
+                    if let selectedPhotoData = item.image,
+                       let uiImage = UIImage(data: selectedPhotoData) {
+                        Image(uiImage: uiImage)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(maxWidth: .infinity, maxHeight: 300)
                     }
-
-                    Section("Photo") {
-                        if let selectedPhotoData = item.image,
-                           let uiImage = UIImage(data: selectedPhotoData) {
-                            Image(uiImage: uiImage)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(maxWidth: .infinity, maxHeight: 300)
-                        }
-
-                        PhotosPicker(selection: $selectedPhoto,
-                                     matching: .images,
-                                     photoLibrary: .shared()) {
-                            Label("Add Image", systemImage: "photo")
-                        }
-
-                        if item.image != nil {
-
-                            Button(role: .destructive) {
-                                withAnimation {
-                                    selectedPhoto = nil
-                                    item.image = nil
-                                }
-                            } label: {
-                                Label("Remove Image", systemImage: "xmark")
-                                    .foregroundStyle(.red)
+                    
+                    PhotosPicker(selection: $selectedPhoto,
+                                 matching: .images,
+                                 photoLibrary: .shared()) {
+                        Label("Add Image", systemImage: "photo")
+                    }
+                    
+                    if item.image != nil {
+                        
+                        Button(role: .destructive) {
+                            withAnimation {
+                                selectedPhoto = nil
+                                item.image = nil
                             }
-                        }
-                    }
-
-                    Section {
-                        Button("Create") {
-                            save()
-                            dismiss()
+                        } label: {
+                            Label("Remove Image", systemImage: "xmark")
+                                .foregroundStyle(.red)
                         }
                     }
                 }
+            }
 
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
@@ -71,10 +64,11 @@ struct CreateLogView: View {
                 }
 
                 ToolbarItem(placement: .primaryAction) {
-                    Button("Done") {
+                    Button("Add") {
                         save()
                         dismiss()
                     }
+                    .accentColor(.green)
                     .disabled(item.title.isEmpty)
                 }
             }

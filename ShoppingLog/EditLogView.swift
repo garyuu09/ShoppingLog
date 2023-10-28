@@ -22,11 +22,11 @@ struct EditLogView: View {
             List {
 
                 Section("Info") {
-                    TextField("memo", text: $item.title)
+                    TextField("Title", text: $item.title)
                     DatePicker("Date", selection: $item.timestamp)
                 }
 
-                Section("Photo") {
+                Section("Image") {
                     if let selectedPhotoData = item.image,
                        let uiImage = UIImage(data: selectedPhotoData) {
                         Image(uiImage: uiImage)
@@ -52,22 +52,17 @@ struct EditLogView: View {
                         }
                     }
                 }
-
-                Section {
-                    Button("Update") {
-                        save()
-                        dismiss()
-                    }
-                }
             }
+            .accentColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
         }
 
         .toolbar {
             ToolbarItem(placement: .primaryAction) {
-                Button("Done") {
+                Button("Update") {
                     save()
                     dismiss()
                 }
+                .accentColor(.green)
                 .disabled(item.title.isEmpty)
             }
         }

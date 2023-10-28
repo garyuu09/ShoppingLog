@@ -21,8 +21,9 @@ struct EditLogView: View {
         NavigationStack {
             List {
 
-                Section("To do title") {
-                    TextField("Name", text: $item.title)
+                Section("Info") {
+                    TextField("memo", text: $item.title)
+                    DatePicker("Date", selection: $item.timestamp)
                 }
 
                 Section("Photo") {
@@ -50,11 +51,6 @@ struct EditLogView: View {
                                 .foregroundStyle(.red)
                         }
                     }
-                }
-
-                Section("General") {
-                    DatePicker("Choose a date",
-                               selection: $item.timestamp)
                 }
 
                 Section {

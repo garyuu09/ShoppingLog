@@ -60,7 +60,7 @@ struct ContentView: View {
                                     .foregroundStyle(Color.gray)
                             }
                         }
-                        .navigationTitle("Shopping Logs")
+                        .navigationTitle("Shopping Log")
                         .navigationBarTitleDisplayMode(.inline)
                         .font(.headline)
                     }
@@ -71,11 +71,11 @@ struct ContentView: View {
                         Text("Logs List")
                     }
                     .tag(0)
-                    // Setting Tab
+                    // Settings Tab
                     SettingView()
                         .tabItem {
                             Image(systemName: "gearshape")
-                            Text("Setting")
+                            Text("Settings")
                         }
                         .tag(1)
                 }

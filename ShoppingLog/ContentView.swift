@@ -85,13 +85,13 @@ struct ContentView: View {
                         }) {
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
-                                .frame(width: 60, height: 60)
-                                .foregroundColor(.black)
+                                .frame(width: 50, height: 50)
+                                .foregroundColor(.green)
                         }
                         .padding(3)
-                        .background(Color.white)
+//                        .background(Color.white)
                         .clipShape(Circle())
-                        .shadow(radius: 10)
+                        .shadow(radius: 5)
                         .zIndex(1) // ボタンを最前面に表示
                         Spacer()
                             .frame(height: 25)

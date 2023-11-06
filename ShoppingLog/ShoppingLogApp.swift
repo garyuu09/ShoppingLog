@@ -25,7 +25,7 @@ struct ShoppingLogApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ShoppingLogListScreen()
         }
         .modelContainer(sharedModelContainer)
     }

@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D61DAC962AF7B9C600D62DF9 /* ShoppingLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61DAC952AF7B9C600D62DF9 /* ShoppingLogListView.swift */; };
 		D6875C772AEB4A8D003AB250 /* ShoppingLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875C762AEB4A8D003AB250 /* ShoppingLogApp.swift */; };
-		D6875C792AEB4A8D003AB250 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875C782AEB4A8D003AB250 /* ContentView.swift */; };
+		D6875C792AEB4A8D003AB250 /* ShoppingLogListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875C782AEB4A8D003AB250 /* ShoppingLogListScreen.swift */; };
 		D6875C7B2AEB4A8D003AB250 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875C7A2AEB4A8D003AB250 /* Item.swift */; };
 		D6875C7D2AEB4A8E003AB250 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6875C7C2AEB4A8E003AB250 /* Assets.xcassets */; };
 		D6875C802AEB4A8E003AB250 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6875C7F2AEB4A8E003AB250 /* Preview Assets.xcassets */; };
@@ -38,9 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D61DAC952AF7B9C600D62DF9 /* ShoppingLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingLogListView.swift; sourceTree = "<group>"; };
 		D6875C732AEB4A8D003AB250 /* ShoppingLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6875C762AEB4A8D003AB250 /* ShoppingLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingLogApp.swift; sourceTree = "<group>"; };
-		D6875C782AEB4A8D003AB250 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6875C782AEB4A8D003AB250 /* ShoppingLogListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingLogListScreen.swift; sourceTree = "<group>"; };
 		D6875C7A2AEB4A8D003AB250 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		D6875C7C2AEB4A8E003AB250 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6875C7F2AEB4A8E003AB250 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -79,6 +81,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D61DAC912AF7B76900D62DF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D6875C782AEB4A8D003AB250 /* ShoppingLogListScreen.swift */,
+				D61DAC952AF7B9C600D62DF9 /* ShoppingLogListView.swift */,
+				D6875CA22AEB572A003AB250 /* CreateLogView.swift */,
+				D6875CA42AEB5A1B003AB250 /* EditLogView.swift */,
+				D6875CA62AECAC18003AB250 /* SettingView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D61DAC922AF7B78300D62DF9 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				D6875C7A2AEB4A8D003AB250 /* Item.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
 		D6875C6A2AEB4A8D003AB250 = {
 			isa = PBXGroup;
 			children = (
@@ -103,11 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				D6875C762AEB4A8D003AB250 /* ShoppingLogApp.swift */,
-				D6875C782AEB4A8D003AB250 /* ContentView.swift */,
-				D6875C7A2AEB4A8D003AB250 /* Item.swift */,
-				D6875CA22AEB572A003AB250 /* CreateLogView.swift */,
-				D6875CA62AECAC18003AB250 /* SettingView.swift */,
-				D6875CA42AEB5A1B003AB250 /* EditLogView.swift */,
+				D61DAC922AF7B78300D62DF9 /* Entity */,
+				D61DAC912AF7B76900D62DF9 /* Views */,
 				D6875C7C2AEB4A8E003AB250 /* Assets.xcassets */,
 				D6875C7E2AEB4A8E003AB250 /* Preview Content */,
 			);
@@ -269,8 +288,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D61DAC962AF7B9C600D62DF9 /* ShoppingLogListView.swift in Sources */,
 				D6875CA52AEB5A1B003AB250 /* EditLogView.swift in Sources */,
-				D6875C792AEB4A8D003AB250 /* ContentView.swift in Sources */,
+				D6875C792AEB4A8D003AB250 /* ShoppingLogListScreen.swift in Sources */,
 				D6875C7B2AEB4A8D003AB250 /* Item.swift in Sources */,
 				D6875CA72AECAC18003AB250 /* SettingView.swift in Sources */,
 				D6875C772AEB4A8D003AB250 /* ShoppingLogApp.swift in Sources */,

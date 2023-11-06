@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ShoppingLogListScreen.swift
 //  ShoppingLog
 //
 //  Created by Ryuga on 2023/10/27.
@@ -8,7 +8,7 @@
 import SwiftUI
 import SwiftData
 
-struct ContentView: View {
+struct ShoppingLogListScreen: View {
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [Item]
     @State private var image: UIImage?
@@ -133,6 +133,6 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ShoppingLogListScreen()
         .modelContainer(for: Item.self, inMemory: true)
 }

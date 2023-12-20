@@ -24,16 +24,23 @@ struct ShoppingLogListView: View {
                                 EditLogView(item: item)
 
                             } label: {
-                                HStack {
+                                HStack(alignment: .top) {
                                     VStack(alignment: .leading, spacing: 2) {
+                                        HStack {
+                                            // 日付
+                                            Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .none))
+                                                .font(.caption2)
+                                            // 場所
+                                            Text("@\(item.location)")
+                                        }
+
                                         // タイトル
                                         Text(item.title)
                                             .font(.subheadline)
                                             .foregroundColor(.white)
-                                        // 日付
-                                        // MARK: 2023/10/27 という形に修正したい
-                                        Text(item.timestamp, format: Date.FormatStyle(date: .numeric, time: .standard))
+
                                     }
+                                    Spacer()
                                     AlbumItemView(item: item)
                                 }
                             }
@@ -102,7 +109,7 @@ struct AlbumItemView: View {
                 .resizable()
                 .scaledToFill()
                 .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: .infinity, maxHeight: 70)
+                .frame(maxWidth: 140, maxHeight: 70)
                 .clipped()
         }
     }

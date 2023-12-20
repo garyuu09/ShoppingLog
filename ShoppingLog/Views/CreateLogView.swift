@@ -21,7 +21,8 @@ struct CreateLogView: View {
             List {
                 Section("Info") {
                     TextField("Title", text: $item.title)
-                    
+                    TextField("Location", text: $item.location)
+
                     DatePicker("Date", selection: $item.timestamp)
                         .fixedSize()
                 }

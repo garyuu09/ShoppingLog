@@ -84,6 +84,15 @@ struct ShoppingLogListView: View {
                     .zIndex(1) // ボタンを最前面に表示
             }
         }
+        .overlay {
+            if items.isEmpty {
+                ContentUnavailableView(
+                    "No Shopping Logs",
+                    systemImage: "doc.richtext.fill",
+                    description: Text("Try to search for another title.")
+                )
+            }
+        }
         .fullScreenCover(isPresented: $showCreateLogView) {
             NavigationStack {
                 CreateLogView()

@@ -14,12 +14,32 @@ struct ShoppingLogListView: View {
     @State private var showCreateLogView = false
     @State private var searchQuery = ""
 
+    var filteredItems: [Item] {
+
+        if searchQuery.isEmpty {
+            return items
+        }
+
+        let filteredItems = items.compactMap { item in
+
+            let titleContainsQuery = item.title.range(of: searchQuery,
+                                                      options: .caseInsensitive) != nil
+            let locationContainsQuery = item.location.range(of: searchQuery,
+                                                      options: .caseInsensitive) != nil
+
+            return (titleContainsQuery || locationContainsQuery) ? item : nil
+        }
+
+        return filteredItems
+    }
+
+
     var body: some View {
         ZStack {
             NavigationStack {
                 VStack {
                     List {
-                        ForEach(items) { item in
+                        ForEach(filteredItems) { item in
                             NavigationLink {
                                 EditLogView(item: item)
 

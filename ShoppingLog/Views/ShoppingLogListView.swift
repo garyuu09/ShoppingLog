@@ -39,7 +39,7 @@ struct ShoppingLogListView: View {
             NavigationStack {
                 VStack {
                     List {
-                        ForEach(items) { item in
+                        ForEach(filteredItems) { item in
                             NavigationLink {
                                 EditLogView(item: item)
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D61DAC962AF7B9C600D62DF9 /* ShoppingLogListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D61DAC952AF7B9C600D62DF9 /* ShoppingLogListView.swift */; };
+		D63D39C72B3F076B009A37CF /* SortOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63D39C62B3F076B009A37CF /* SortOption.swift */; };
 		D6875C772AEB4A8D003AB250 /* ShoppingLogApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875C762AEB4A8D003AB250 /* ShoppingLogApp.swift */; };
 		D6875C792AEB4A8D003AB250 /* ShoppingLogListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875C782AEB4A8D003AB250 /* ShoppingLogListScreen.swift */; };
 		D6875C7B2AEB4A8D003AB250 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6875C7A2AEB4A8D003AB250 /* Item.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		D61DAC952AF7B9C600D62DF9 /* ShoppingLogListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingLogListView.swift; sourceTree = "<group>"; };
+		D63D39C62B3F076B009A37CF /* SortOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOption.swift; sourceTree = "<group>"; };
 		D6875C732AEB4A8D003AB250 /* ShoppingLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShoppingLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6875C762AEB4A8D003AB250 /* ShoppingLogApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingLogApp.swift; sourceTree = "<group>"; };
 		D6875C782AEB4A8D003AB250 /* ShoppingLogListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingLogListScreen.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				D6875C7A2AEB4A8D003AB250 /* Item.swift */,
+				D63D39C62B3F076B009A37CF /* SortOption.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				D6875CA52AEB5A1B003AB250 /* EditLogView.swift in Sources */,
 				D6875C792AEB4A8D003AB250 /* ShoppingLogListScreen.swift in Sources */,
 				D6875C7B2AEB4A8D003AB250 /* Item.swift in Sources */,
+				D63D39C72B3F076B009A37CF /* SortOption.swift in Sources */,
 				D6875CA72AECAC18003AB250 /* SettingView.swift in Sources */,
 				D6875C772AEB4A8D003AB250 /* ShoppingLogApp.swift in Sources */,
 				D6875CA32AEB572A003AB250 /* CreateLogView.swift in Sources */,

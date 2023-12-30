@@ -26,7 +26,6 @@ struct SettingView: View {
                     Text("特定商取引法に基づく表示")
                 }
 
-
                 Section {
                     //
                 } footer: {

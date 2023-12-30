@@ -90,4 +90,3 @@ struct CreateLogView: View {
 #Preview {
     CreateLogView()
 }
-

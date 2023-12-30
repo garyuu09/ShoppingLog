@@ -34,7 +34,6 @@ struct ShoppingLogListView: View {
         return filteredItems.sort(option: selectedSortOption)
     }
 
-
     var body: some View {
         ZStack {
             NavigationStack {
@@ -106,9 +105,9 @@ struct ShoppingLogListView: View {
             // 丸い追加ボタン
             .safeAreaInset(edge: .bottom,
                            alignment: .trailing) {
-                    Button(action: {
+                    Button {
                         showCreateLogView = true
-                    }) {
+                    } label: {
                         Image(systemName: "plus.circle.fill")
                             .resizable()
                             .frame(width: 60, height: 60)

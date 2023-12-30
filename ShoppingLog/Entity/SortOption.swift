@@ -9,8 +9,8 @@ import Foundation
 
 enum SortOption: String, CaseIterable {
     case title
+    case location
     case date
-    case category
 }
 
 extension SortOption {
@@ -19,10 +19,10 @@ extension SortOption {
         switch self {
         case .title:
             "textformat.size.larger"
+        case .location:
+            "mappin.and.ellipse"
         case .date:
             "calendar"
-        case .category:
-            "folder"
         }
     }
 }

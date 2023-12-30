@@ -13,6 +13,7 @@ struct ShoppingLogListView: View {
     @Query private var items: [Item]
     @State private var showCreateLogView = false
     @State private var searchQuery = ""
+    @State private var selectedSortOption = SortOption.allCases.first!
 
     var filteredItems: [Item] {
 
@@ -77,6 +78,21 @@ struct ShoppingLogListView: View {
                     .listStyle(.plain)
                 }
                 .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Menu {
+                            Picker("", selection: $selectedSortOption) {
+                                ForEach(SortOption.allCases,
+                                        id: \.rawValue) { option in
+                                    Label(option.rawValue.capitalized,
+                                          systemImage: option.systemImage)
+                                    .tag(option)
+                                }
+                            }
+//                            .labelsHidden()
+                        } label: {
+                            Image(systemName: "line.horizontal.3.decrease.circle")
+                        }
+                    }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         EditButton()
                             .foregroundStyle(Color.gray)

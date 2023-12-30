@@ -175,5 +175,4 @@ extension [Item] {
 
 #Preview {
     ShoppingLogListView()
-        
 }

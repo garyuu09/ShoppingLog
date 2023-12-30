@@ -13,11 +13,12 @@ struct ShoppingLogListView: View {
     @Query private var items: [Item]
     @State private var showCreateLogView = false
     @State private var searchQuery = ""
+    @State private var selectedSortOption = SortOption.allCases.first!
 
     var filteredItems: [Item] {
 
         if searchQuery.isEmpty {
-            return items
+            return items.sort(option: selectedSortOption)
         }
 
         let filteredItems = items.compactMap { item in
@@ -30,7 +31,7 @@ struct ShoppingLogListView: View {
             return (titleContainsQuery || locationContainsQuery) ? item : nil
         }
 
-        return filteredItems
+        return filteredItems.sort(option: selectedSortOption)
     }
 
 
@@ -77,6 +78,21 @@ struct ShoppingLogListView: View {
                     .listStyle(.plain)
                 }
                 .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Menu {
+                            Picker("", selection: $selectedSortOption) {
+                                ForEach(SortOption.allCases,
+                                        id: \.rawValue) { option in
+                                    Label(option.rawValue.capitalized,
+                                          systemImage: option.systemImage)
+                                    .tag(option)
+                                }
+                            }
+//                            .labelsHidden()
+                        } label: {
+                            Image(systemName: "line.horizontal.3.decrease.circle")
+                        }
+                    }
                     ToolbarItem(placement: .navigationBarTrailing) {
                         EditButton()
                             .foregroundStyle(Color.gray)
@@ -144,7 +160,19 @@ struct AlbumItemView: View {
     }
 }
 
+extension [Item] {
+    func sort(option: SortOption) -> [Item] {
+        switch option {
+        case .title:
+            self.sorted(by: { $0.title < $1.title })
+        case .date:
+            self.sorted(by: { $0.timestamp < $1.timestamp })
+        case .location:
+            self.sorted(by: { $0.location < $1.location })
+        }
+    }
+}
+
 #Preview {
     ShoppingLogListView()
-        
 }

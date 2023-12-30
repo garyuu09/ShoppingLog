@@ -17,7 +17,7 @@ struct ShoppingLogListView: View {
     var filteredItems: [Item] {
 
         if searchQuery.isEmpty {
-            return items
+            return items.sort(option: selectedSortOption)
         }
 
         let filteredItems = items.compactMap { item in
@@ -30,7 +30,7 @@ struct ShoppingLogListView: View {
             return (titleContainsQuery || locationContainsQuery) ? item : nil
         }
 
-        return filteredItems
+        return filteredItems.sort(option: selectedSortOption)
     }
 
 

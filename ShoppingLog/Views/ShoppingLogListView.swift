@@ -144,6 +144,19 @@ struct AlbumItemView: View {
     }
 }
 
+extension [Item] {
+    func sort(option: SortOption) -> [Item] {
+        switch option {
+        case .title:
+            self.sorted(by: { $0.title < $1.title })
+        case .date:
+            self.sorted(by: { $0.timestamp < $1.timestamp })
+        case .location:
+            self.sorted(by: { $0.location < $1.location })
+        }
+    }
+}
+
 #Preview {
     ShoppingLogListView()
         

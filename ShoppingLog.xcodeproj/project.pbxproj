@@ -88,11 +88,10 @@
 		D61DAC912AF7B76900D62DF9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D63D39CB2B4249BC009A37CF /* TabViews */,
 				D6875C782AEB4A8D003AB250 /* ShoppingLogListScreen.swift */,
-				D61DAC952AF7B9C600D62DF9 /* ShoppingLogListView.swift */,
 				D6875CA22AEB572A003AB250 /* CreateLogView.swift */,
 				D6875CA42AEB5A1B003AB250 /* EditLogView.swift */,
-				D6875CA62AECAC18003AB250 /* SettingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +104,15 @@
 				D63D39C92B419F4D009A37CF /* Tab.swift */,
 			);
 			path = Entity;
+			sourceTree = "<group>";
+		};
+		D63D39CB2B4249BC009A37CF /* TabViews */ = {
+			isa = PBXGroup;
+			children = (
+				D61DAC952AF7B9C600D62DF9 /* ShoppingLogListView.swift */,
+				D6875CA62AECAC18003AB250 /* SettingView.swift */,
+			);
+			path = TabViews;
 			sourceTree = "<group>";
 		};
 		D6875C6A2AEB4A8D003AB250 = {

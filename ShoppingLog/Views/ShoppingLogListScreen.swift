@@ -10,26 +10,19 @@ import SwiftData
 
 struct ShoppingLogListScreen: View {
     @State private var image: UIImage?
-    @State private var selectedTab = 0
+    @State private var selectedTab: Tab = .logsList
 
     var body: some View {
         ZStack {
             VStack {
                 TabView(selection: $selectedTab) {
-                    /// Logs Listのタブ
                     ShoppingLogListView()
-                        .tabItem {
-                            Image(systemName: "cart")
-                            Text("Logs List")
-                        }
-                        .tag(0)
-                    /// Settingsのタブ
+                        .tag(Tab.logsList)
+                        .tabItem { Tab.logsList.tabContent }
+
                     SettingView()
-                        .tabItem {
-                            Image(systemName: "gearshape")
-                            Text("Settings")
-                        }
-                        .tag(1)
+                        .tag(Tab.settings)
+                        .tabItem { Tab.settings.tabContent }
                 }
                 .accentColor(.white)
             }

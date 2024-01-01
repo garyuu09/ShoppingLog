@@ -12,7 +12,7 @@ enum Tab: String {
     case settings = "Settings"
 
     @ViewBuilder
-    var tabCount: some View {
+    var tabContent: some View {
         switch self {
         case .logsList:
             Image(systemName: "cart")
